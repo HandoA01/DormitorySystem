@@ -1,11 +1,256 @@
+.resultContainer {
+  padding: 40px;
+  font-family: 'Pretendard', sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 240px;
+  max-width: 300px;
+  border-radius: 20px;
+  background-color: #000000;
+  border-top: 8px solid;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.card.bad {
+  border-top-color: #FFD6D6;
+  color: #FF5A5A;
+}
+
+.card.good {
+  border-top-color: #D6FFE6;
+  color: #00CC66;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  .card {
+    max-width: 100%;
+  }
+  .welcome_style {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .checklist-scroll-container {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+  }
+
+  .checklist-card {
+    width: 100% !important;
+    max-width: 90%;
+  }
+}
+
+body, html, #root {
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+
+
+
 .App {
   text-align: center;
+  background-color: black;
 }
+
+.me-auto {
+  position: absolute;
+  right: 20px;
+}
+
+.button_style {
+  background-color:#3F7AB5;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  border-style: none;
+}
+#welcome {
+  width: 100%;
+  min-height: 400px;
+  color: white;
+  padding: 80px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.dormitory_select {
+  width: 100%;
+  min-height: 800px;
+  color: white;
+  padding: 50px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.dormitory_button_style {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  width: 380px;
+  height: 480px;
+  margin: 20px;
+  text-align: center;
+
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dormitory_button_style:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(255, 255, 255, 0.2);
+}
+
+.dormitory_people_style {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  width: 250px;
+  height: 200px;
+  margin: 30px;
+  display: flex;
+  text-align: center;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+
+
+.welcome_style {
+  font-size: 80px;
+  font-weight: bold;
+}
+.inspection_checklist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.circlechecklist {
+  width: 180px;
+  height: 280px;
+  background-color: #3F7AB5;
+  color: white;
+  border-radius: 40% / 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.circlechecklist:hover {
+  transform: scale(1.03);
+}
+
+.circlechecklist .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.circlechecklist .divider {
+  width: 60%;
+  border: 1px solid white;
+  margin: 8px 0;
+}
+
+.circlechecklist .desc {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+
+.box1 {
+  width: 350px;
+  height: 310px;
+  border-radius: 30px 30px 20px 20px;
+  background-color: white;
+  margin: 0px 8px;
+}
+
+
+#input {
+  width: 350px;
+  height: 35px;
+  outline: 1px solid rgb(213, 213, 213);
+  border: none;
+  border-radius: 5px;
+}
+
+#append_but {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(48, 149, 101);
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.doing {
+  height: 50px;
+  width: 450px;
+  line-height: 47px;
+  text-align: left;
+  margin: auto;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+
+
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
